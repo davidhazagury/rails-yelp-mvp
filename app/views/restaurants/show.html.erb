@@ -1,9 +1,10 @@
-<h1>@restaurant.name</h1>
-<p>Address: @restaurant.address</p>
-<p>Phone number: @restauran.phone_number</p>
+<h1><%= @restaurant.name %></h1>
+<p>Address: <%= @restaurant.address %></p>
+<p>Phone number: <%= @restaurant.phone_number %></p>
+<p>Category: <%= @restaurant.category %></p>
 
 
 
-
-
+<%= link_to "Add a review", new_restaurant_review_path(@restaurant)  %>
+<br>
 <%= link_to "Back to the list", restaurants_path  %>

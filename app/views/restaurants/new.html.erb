@@ -1,0 +1,17 @@
+<h1>Create your restaurant:</h1>
+<br>
+<%= simple_form_for @restaurant do |restaurant| %>
+  <%= restaurant.error_notification %>
+  <%= restaurant.input :name %>
+  <%= restaurant.input :address %>
+  <%= restaurant.input :phone_number %>
+  <%= restaurant.input :category,
+    collection: [
+      "chinese",
+      "italian",
+      "japanse",
+      "french",
+      "belgian"] %>
+  <%= restaurant.button :submit, class: "btn-primary" %>
+  <%= link_to "Back to list", restaurants_path  %>
+<% end %>
