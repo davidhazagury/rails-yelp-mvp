@@ -9,7 +9,6 @@ class RestaurantsController < ApplicationController
   # Shows one restaurant
 
   def show
-
+    @restaurant = Restaurant.find(params[:id])
   end
-
 end
